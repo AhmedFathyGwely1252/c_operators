@@ -1,4 +1,4 @@
-# C programming Session 1
+# C programming basic 1
 
 ## Table of Contents
 
@@ -491,7 +491,288 @@
             */
         ```
 
+-   Unconditional Branching
 
+    > unconditional branching can be achieved using the `goto` statement. The `goto` statement transfers control to the `labeled statement` specified as its argument.
+
+    Syntax :
+
+        // Backward Jumping
+
+        labelName :
+
+        ...
+
+        goto labelName;
+
+        OR
+
+        // Forward Jumping
+
+        goto labelName;
+
+        ...
+
+        labelName :
+
+    for example :
+
+    ```C
+        int x;
+        scanf("%d",&x);
+
+        if(x == 11) {
+            goto eleven;
+        }
+        else{
+            goto otherwise;
+        }
+
+
+        eleven :
+            printf("X equals eleven\n");
+            return 0;
+
+        otherwise:
+            printf("X doesn't equal eleven\n");
+            return 0;
+    ```
+
+    Important Note :
+
+        In general, it is not considered good practice to use goto statements in C, because they can make the code more difficult to understand and maintain. Using goto statements can lead to spaghetti code, where the flow of control is difficult to follow and debug.
+
+    See this example :
+
+    ```C
+        int i = 0;
+
+        loop: // label
+        printf("%d ", i);
+        i++;
+        if (i < 10) {
+            goto loop; // unconditional jump to label
+        }
+
+        return 0;
+    ```
+
+### Loops
+
+-   Types of Loops
+
+    -   While
+
+        Syntax:
+
+        ```C
+            while(/* condition */) {
+                // Statement
+            }
+        ```
+
+        for example:
+
+        ```C
+            int i = 0;
+            while(i < 11) {
+                printf("%d\n",i);
+                i++;
+            }
+        ```
+
+    -   For
+
+        Syntax:
+
+        ```C
+            for(/* initialization */; /* condition */; /* increment/decrement */) {
+                // Statement
+                // Statement
+            }
+        ```
+
+        for example:
+
+        ```C
+            for(int i = 0;i < 11;i++) {
+                printf("%d\n",i);
+            }
+        ```
+
+    -   Do While
+
+        Syntax:
+
+        ```C
+            do {
+                // Statement
+                // Statement
+            } while(/* Condition */)
+        ```
+
+        for example:
+
+        ```C
+            int x = 11;
+            do {
+                printf("%d\n",x);
+                x--;
+            } while(x >= 0);
+        ```
+
+-   Keywords
+
+    -   Continue
+
+        > `continue` is a keyword used in loops (for, while, and do-while) to skip the current iteration and move on to the next iteration. When continue is encountered in a loop, the remaining statements in the loop body are skipped, and control jumps back to the loop header to re-evaluate the loop condition.
+
+        for example:
+
+        ```C
+            for (int i = 0; i < 10; i++) {
+                if (i == 5) {
+                    continue;  // skip the rest of the loop body for i = 5
+                }
+                printf("%d ", i);
+            }
+
+            // 0 1 2 3 4 6 7 8 9
+        ```
+
+    -   Break
+
+        > `break` is a keyword used in loops (for, while, and do-while) and switch statements to exit the loop or switch statement prematurely. When break is encountered in a loop or switch statement, the control immediately jumps to the statement immediately following the loop or switch.
+
+        for example:
+
+        ```C
+        for (int i = 0; i < 10; i++) {
+            if (i == 5) {
+                break;   // exit the loop when i == 5
+            }
+            printf("%d ", i);
+        }
+
+        // 0 1 2 3 4
+        ```
+
+### Arrays
+
+> In C, an `array` is a collection of elements of the `same type`, stored `contiguously` in memory.
+
+-   Structure
+
+    ![alt text](https://www.programiz.com/sites/tutorial2program/files/c-arrays.jpg "Arrays in C")
+
+-   Storage in Memory
+
+    ![alt text](https://media.geeksforgeeks.org/wp-content/uploads/array-2.png "Arrays in C")
+
+-   Declaration vs Initialization
+
+    ```C
+        // Here I have 10 Garbage values stored in the array
+        int arr1[10];
+        // Here I have 10 Values numbered from 1 to 10 stored in the array
+        int arr2[10] = {};
+    ```
+
+-   Accessing Elements
+
+    > In C, you can access individual elements of an array using the array name and an index. The index represents the position of the element in the array, starting from 0.
+
+    for example :
+
+    ```C
+        int my_array[5] = {10, 20, 30, 40, 50};
+
+        // Accessing the first element of the array
+        int first_element = my_array[0];
+
+        // Accessing the second element of the array
+        int second_element = my_array[1];
+
+        // Changing the value of the third element of the array
+        my_array[2] = 35;
+
+        /*
+            Note that :
+                We assign values to the array elements using the curly braces { }. To access an individual element of the array, we use the array name and an index inside square brackets [ ].
+
+        */
+    ```
+
+-   Iterating over array
+
+    ```C
+
+        // Reading Array elements
+        int arr1[5];
+        for(int i = 0;i < 5;i++){
+            scanf("%d",&arr1[i]);
+        }
+
+        // Printing Array Values
+        int arr2[5] = {10, 20, 30, 40, 50};
+        for(int i = 0;i < 5;i++){
+            printf("%d\n",arr2[i]);
+        }
+    ```
+
+-   Special types of arrays
+
+    -   Character array
+
+        > In C, a string is represented as an array of characters terminated by a null character ('\0'). This null character is used to mark the end of the string and is automatically added by the compiler when you initialize a string.
+
+        for example :
+
+        ```C
+            char my_string[] = "Hello, world!";
+            /*
+            In this example, we have defined a character array named my_string and initialized it with the string "Hello, world!". The array has a length of 14 characters (including the null character).
+            */
+        ```
+
+-   Multidimensional Array
+
+    - Structure:
+    
+        ![alt text](https://techvidvan.com/tutorials/wp-content/uploads/sites/2/2021/06/Multidimensional-Arrays-in-C.jpg "Arrays in C")
+
+    - syntax:
+
+            data_type array_name[size1][size2]...[sizeN];
+
+        for example:
+
+        ```C
+            // Declaration
+            int x = myArray[1][2];
+            // Initialization:
+            int myArray[3][4] = {
+                {1, 2, 3, 4},
+                {5, 6, 7, 8},
+                {9, 10, 11, 12}
+            };
+
+        ```
+
+-   sizeof operator with array
+
+    > When used with arrays, sizeof returns the size of the entire array in bytes.
+
+    for example:
+
+    ```C
+        int myArray[10];
+        int size = sizeof(myArray); // 40
+    ```
+
+    Important usage:
+
+    How to Calculate number of elements in array at `compile time`:
 
     ```C
         int numElements = sizeof(myArray) / sizeof(myArray[0]);
