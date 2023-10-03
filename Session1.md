@@ -244,7 +244,7 @@
             /=
             %=
 
-      ```C
+       ```C
              int a = 5, c;
 
              c = a;      // c is 5
@@ -260,7 +260,7 @@
              c %= a;     // c = 0
              printf("c = %d\n", c);
 
-      ```
+       ```
       
 
 
@@ -274,8 +274,8 @@
             >=
             <=
 
-      ```C
-    int a = 5, b = 5, c = 10;
+       ```C
+            int a = 5, b = 5, c = 10;
 
             printf("%d == %d is %d \n", a, b, a == b);
             printf("%d == %d is %d \n", a, c, a == c);
@@ -289,7 +289,7 @@
             printf("%d >= %d is %d \n", a, c, a >= c);
             printf("%d <= %d is %d \n", a, b, a <= b);
             printf("%d <= %d is %d \n", a, c, a <= c);
-      ```
+       ```
 
 
 
@@ -303,7 +303,7 @@
 
 
 
-      ```C
+       ```C
             int a = 5, b = 5, c = 10, result;
 
             result = (a == b) && (c > b);
@@ -323,7 +323,7 @@
 
             result = !(a == b);
             printf("!(a == b) is %d \n", result);
-      ```
+       ```
 
 
 
