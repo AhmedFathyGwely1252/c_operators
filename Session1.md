@@ -234,12 +234,15 @@
             ```
 
 
-    -   Logical
 
-            &&  Logical And
-            ||  Logical Or
-            !   Logical Not
+    -   Assignment
 
+            =
+            +=
+            -=
+            *=
+            /=
+            %=
 
       ```C
              int a = 5, c;
@@ -258,6 +261,70 @@
              printf("c = %d\n", c);
 
       ```
+      
+
+
+
+    -   Relational
+
+            ==
+            !=
+            <
+            >
+            >=
+            <=
+
+      ```C
+    int a = 5, b = 5, c = 10;
+
+            printf("%d == %d is %d \n", a, b, a == b);
+            printf("%d == %d is %d \n", a, c, a == c);
+            printf("%d > %d is %d \n", a, b, a > b);
+            printf("%d > %d is %d \n", a, c, a > c);
+            printf("%d < %d is %d \n", a, b, a < b);
+            printf("%d < %d is %d \n", a, c, a < c);
+            printf("%d != %d is %d \n", a, b, a != b);
+            printf("%d != %d is %d \n", a, c, a != c);
+            printf("%d >= %d is %d \n", a, b, a >= b);
+            printf("%d >= %d is %d \n", a, c, a >= c);
+            printf("%d <= %d is %d \n", a, b, a <= b);
+            printf("%d <= %d is %d \n", a, c, a <= c);
+      ```
+
+
+
+
+
+    -   Logical
+
+            &&  Logical And
+            ||  Logical Or
+            !   Logical Not
+
+
+
+      ```C
+            int a = 5, b = 5, c = 10, result;
+
+            result = (a == b) && (c > b);
+            printf("(a == b) && (c > b) is %d \n", result);
+
+            result = (a == b) && (c < b);
+            printf("(a == b) && (c < b) is %d \n", result);
+
+            result = (a == b) || (c < b);
+            printf("(a == b) || (c < b) is %d \n", result);
+
+            result = (a != b) || (c < b);
+            printf("(a != b) || (c < b) is %d \n", result);
+
+            result = !(a != b);
+            printf("!(a != b) is %d \n", result);
+
+            result = !(a == b);
+            printf("!(a == b) is %d \n", result);
+      ```
+
 
 
     -   Bitwise
@@ -269,23 +336,10 @@
             >>  Right Shift
             <<  Left Shift
 
-    -   Relational
 
-            ==
-            !=
-            <
-            >
-            >=
-            <=
 
-    -   Assignment
 
-            =
-            +=
-            -=
-            *=
-            /=
-            %=
+
 
     -   Additional Operators in C
 
@@ -297,6 +351,8 @@
             sizeof  Size-of
             []      Brackets
             ?:      Ternary Operator
+
+
 
 -   Logical vs Bitwise operators
 
