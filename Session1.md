@@ -176,6 +176,31 @@
 
     -   Arithmetic
 
+        -   Binary
+
+                  +   Addition
+                  -   Subtraction
+                  *   multiplication
+                  /   Division
+                  %   Modulus [remainder of the division]
+
+
+
+            ```C
+                     c = a+b;
+                     printf("a+b = %d \n",c);
+                     c = a-b;
+                     printf("a-b = %d \n",c);
+                     c = a*b;
+                     printf("a*b = %d \n",c);
+                     c = a/b;
+                     printf("a/b = %d \n",c);
+                     c = a%b;
+                     printf("Remainder when a divided by b = %d \n",c);
+            
+            ```
+
+
         -   Unary
 
                   ++ [post increment] / [pre increment]
@@ -207,30 +232,6 @@
                 int y = 11;
                 printf("%d\n",++x + y--);
                 printf("%d",x++ - ++y);
-            ```
-
-        -   Binary
-
-                  +   Addition
-                  -   Subtraction
-                  *   multiplication
-                  /   Division
-                  %   Modulus [remainder of the division]
-
-
-
-            ```C
-                     c = a+b;
-                     printf("a+b = %d \n",c);
-                     c = a-b;
-                     printf("a-b = %d \n",c);
-                     c = a*b;
-                     printf("a*b = %d \n",c);
-                     c = a/b;
-                     printf("a/b = %d \n",c);
-                     c = a%b;
-                     printf("Remainder when a divided by b = %d \n",c);
-            
             ```
 
 
