@@ -1,4 +1,4 @@
-# C programming basic 1
+# C programming Session 2
 
 ## Table of Contents
 
@@ -8,8 +8,6 @@
 -   [Operators](#operators)
 -   [Comments](#comments)
 -   [Branching](#branching)
--   [Loops](#loops)
--   [Arrays](#arrays)
 
 ### Variables
 
@@ -243,7 +241,7 @@
             !   Logical Not
 
 
-            ```C
+      ```C
              int a = 5, c;
 
              c = a;      // c is 5
@@ -259,7 +257,7 @@
              c %= a;     // c = 0
              printf("c = %d\n", c);
 
-             ```
+      ```
 
 
     -   Bitwise
