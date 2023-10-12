@@ -200,6 +200,21 @@
             
             ```
 
+-   test1
+
+             int x ;
+    scanf("%d", &x);
+    
+    int num1 , num2 , num3, temp ;
+    
+    num1 = x % 10 ;
+    temp = x / 10 ;
+    num2 = temp % 10 ;
+    temp = temp / 10 ;
+    num3 = temp % 10 ;
+    
+    printf("%d %d %d", num1 , num2 , num3)
+
 
         -   Unary
 
