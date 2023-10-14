@@ -359,6 +359,25 @@
             >>  Right Shift
             <<  Left Shift
 
+           
+            
+
+            ```C
+                     int a = 10 , b = 5 , c;
+                     c = a & b ;
+                     printf("a & b = %d \n",c);
+                     c = a | b;
+                     printf("a|b = %d \n",c);
+                     c = a ^ b;
+                     printf("a^b = %d \n",c);
+                     c = ~b;
+                     printf("~b = %d \n",c);
+                     c = a >> 2 ;
+                     printf("a >> 2 = %d \n",c);
+                     c = a << 2 ;
+                     printf("a << 2 = %d \n",c);          
+
+            ```
 
 
 
