@@ -186,7 +186,8 @@
 
 
 
-            ```C
+         -  for example :
+         -  
                      c = a+b;
                      printf("a+b = %d \n",c);
                      c = a-b;
@@ -198,14 +199,12 @@
                      c = a%b;
                      printf("Remainder when a divided by b = %d \n",c);
             
-            ```
 
--   test1
+     -  for example :
 
         -   modulus
 
     
-            ```C
 
                      int x ;
                      scanf("%d", &x);
@@ -220,7 +219,7 @@
     
                      printf("%d %d %d", num1 , num2 , num3)
 
-            ```
+       
 
         -   Unary
 
@@ -267,23 +266,23 @@
             /=
             %=
 
-      ```C
-         int a = 5, c;
+    -  for example :
+       
+              int a = 5, c;
 
-         c = a;      // c is 5
-         printf("c = %d\n", c);
-         c += a;     // c is 10 
-         printf("c = %d\n", c);
-         c -= a;     // c is 5
-         printf("c = %d\n", c);
-         c *= a;     // c is 25
-         printf("c = %d\n", c);
-         c /= a;     // c is 5
-         printf("c = %d\n", c);
-         c %= a;     // c = 0
-         printf("c = %d\n", c);
+              c = a;      // c is 5
+              printf("c = %d\n", c);
+              c += a;     // c is 10 
+              printf("c = %d\n", c);
+              c -= a;     // c is 5
+              printf("c = %d\n", c);
+              c *= a;     // c is 25
+              printf("c = %d\n", c);
+              c /= a;     // c is 5
+              printf("c = %d\n", c);
+              c %= a;     // c = 0
+              printf("c = %d\n", c);
 
-      ```
       
 
 
@@ -326,7 +325,8 @@
 
 
 
-       ```C
+     -  for example :
+       
             int a = 5, b = 5, c = 10, result;
 
             result = (a == b) && (c > b);
@@ -346,7 +346,7 @@
 
             result = !(a == b);
             printf("!(a == b) is %d \n", result);
-       ```
+       
 
 
 
@@ -359,11 +359,15 @@
             >>  Right Shift
             <<  Left Shift
 
-           
-            
 
-            ```C
+           
+     -  for example :
+
                      int a = 10 , b = 5 , c;
+
+                     // a = 00000000  00000000  00000000  00001010
+                     // b = 00000000  00000000  00000000  00000101
+        
                      c = a & b ;
                      printf("a & b = %d \n",c);
                      c = a | b;
@@ -377,7 +381,6 @@
                      c = a << 2 ;
                      printf("a << 2 = %d \n",c);          
 
-            ```
 
 
 
