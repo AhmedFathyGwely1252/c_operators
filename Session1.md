@@ -576,6 +576,46 @@
             }
         ```
 
+
+    -   for example :
+      
+      
+        ```C
+            char x ;
+            int  a, b , res ;
+        
+            scanf("%d %c %d" , &a ,&x , &b);
+            if(x == '+'){
+               res = a + b ;
+               printf("%d", res);
+            }
+            else if(x == '-')
+            {
+               res = a - b ;
+               printf("%d", res);
+            }
+            else if(x == '*')
+            {
+               res = a * b ;
+               printf("%d", res);    
+            }  
+            else if(x == '/')
+            {
+               res = a / b ;
+               printf("%d", res);    
+            }        
+            else if(x == '%')
+            {
+               res = a % b ;
+               printf("%d", res);    
+            }
+            else{
+               printf("error in your input ");
+            }
+        
+        ```
+
+
     -   switch case
 
         ```C
